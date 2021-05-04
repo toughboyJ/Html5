@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Jeffs html project</title>
+	<title>This is Steven's website.</title>
+	<script>
+		function checkName() {
+                if (username.value.length < 3) {
+                    alert("your name is too short:" + username.value);
+                }
+                else if (username.value.length > 7) {
+                   alert("your name is too long:" + username.value);
+                }
+                 else alert("Your name is great:");
+                }
+             function checkAge() {
+               if (age.value<6) alert("you are too young")
+               else if (age.value>25) alert("you are too old");
+                else alert("Your age is great:");
+             }
+             function checkPassword(){
+               if (password.value.length<3)
+               alert("a strong passwrod must have 1 number and 8-20 lower or uppercase chacters.")
+             else if (password.value.length>20)
+              alert("your password is too long.")
+             else alert("Your password is great")
+             //1.the password must be 8-20 chacters long
+              //2.the password must have both lower and uppercase letters
+              let ps=password.value
+              let isalllowercase= ps==ps.toLowerCase()
+              let isallUpperCase= ps==ps.toUpperCase()
+              if(isalllowercase || isallUpperCase){alert ("Your password must have both upper and lower case letters.")}
+              else alert("You followed the rules")
+               //3.the password must have a numbers and letters
+               let hasnumber=false
+              for(let index = 0; index<ps.length; index++){
+if( ps[index] *0 == 0 )
+
+console.log('Is a number')
+} 
+if(hasnumber==false){alert("Your password must have a number.")}
+             }
+	</script>
 </head>
+
 <body>
-
-<h1>I will create games here</h1>
-<p>This is my first game.</p>
-
-</body>
+	<h1 style="color: green;">I enjoy playing BTD battles, Roblox, Minecraft, and Brawl Stars.</h1>
+	<h1 style="color: red;">Those are the best games.</h1>
+	<p>What is your first name?</p>
+	<input id="username" type="text" onchange="checkName()" />
+        <p>What is your age?</p>
+        <input type="number" id="age" onchange="checkAge()"/>
+        <p></p>
+        <p>What is your password?</p>
+        <input type="password" id="password" onchange="checkPassword()" />
+        <button>Submit</button><br />
+        <a href="GameOfNumbers.html">Let's play with numbers</a>
+    </body>
 </html>

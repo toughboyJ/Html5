@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Let's have fun with numbers.</title>
+        <script>
+            function isodd() {
+                let val = bignumber.value;
+                if (val % 2 == 1) {
+                    output.innerHTML = "<h3>" + val + "is odd</h3>";
+                } else {
+                    output.innerHTML = "<h3>" + val + "is even</h3>";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 style="color: blue;">I enjoy playing Roblox.</h1>
+
+        <p>Please enter a number.</p>
+        <input type="number" id="bignumber" />
+        <p>
+            <button onclick="isodd()">Is the number odd?</button>
+        </p>
+        <p />
+        <p id="output"></p>
+    </body>
+</html>
