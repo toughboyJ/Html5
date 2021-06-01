@@ -6,9 +6,30 @@
             function isodd() {
                 let val = bignumber.value;
                 if (val % 2 == 1) {
-                    output.innerHTML = "<h3>" + val + "is odd</h3>";
+                    output.innerHTML = "<h3>" + val + " is odd</h3>";
                 } else {
-                    output.innerHTML = "<h3>" + val + "is even</h3>";
+                    output.innerHTML = "<h3>" + val + " is even</h3>";
+                }
+            }
+            function divisibleby3() {
+                if (bignumber.value % 3 == 0) {
+                    alert("The number can be divided by 3.");
+                } else {
+                    alert("The number cannot be divided by 3.");
+                }
+            }
+            function autofill() {
+                let ran = Math.random() * 9000;
+                let big = Math.round(ran);
+                bignumber.value = big;
+            }
+            function isSquare() {
+                let sq = bignumber.value;
+                let root = Math.sqrt(sq);
+                if (Number.isInteger(root)) {
+                    alert("yes the number " + sq + "isSquare");
+                } else {
+                    alert("No the number " + sq + "is not square");
                 }
             }
         </script>
@@ -19,8 +40,14 @@
 
         <p>Please enter a number.</p>
         <input type="number" id="bignumber" />
+
+        <button onclick="autofill()">random numbers</button>
         <p>
             <button onclick="isodd()">Is the number odd?</button>
+        </p>
+        <p>
+            <button onclick="isSquare()">Is the number a perfect square?</button>
+            <button onclick="divisibleby3()">Is the number divisible by 3?</button>
         </p>
         <p />
         <p id="output"></p>
